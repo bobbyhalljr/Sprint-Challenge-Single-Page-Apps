@@ -15,6 +15,8 @@ const [char, setChar] = useState([])
     <main>
       <Header />
       <TabNav />
+      <Route exact path='/' 
+        render={props => <WelcomePage {...props} char={char} />} />
       < CharacterList />
     </main>
   );

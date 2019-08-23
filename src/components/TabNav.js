@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from 'react-router-dom';
+import { Navlink } from 'react-router-dom';
 import { Tab, Menu, Icon } from "semantic-ui-react";
 import { NavLink } from 'react-router-dom';
 import WelcomePage from './WelcomePage';
@@ -8,26 +8,13 @@ import LocationCard from './LocationCard';
 import Episodes from './Episodes';
 
 export default function TabNav() {
-    const panes = [
-        {
-          menuItem: 'Home Page',
-          render: () => <Tab.Pane attached={true}>{<WelcomePage />}</Tab.Pane>,
-        },
-        {
-          menuItem: 'Characters',
-          render: () => <Tab.Pane attached={false}>{<CharacterCard />}</Tab.Pane>,
-        },
-        {
-          menuItem: 'Location',
-          render: () => <Tab.Pane attached={false}>{<LocationCard />}</Tab.Pane>,
-        },
-        {
-            menuItem: 'Episodes',
-        render: () => <Tab.Pane attached={false}>{<Episodes />}</Tab.Pane>,
-        },
-      ]
+  const panes = [
+    { menuItem: 'Home', render: () => <Tab.Pane>Tab 1 Content</Tab.Pane> },
+    { menuItem: 'Tab 2', render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
+    { menuItem: 'Tab 3', render: () => <Tab.Pane>Tab 3 Content</Tab.Pane> },
+  ]
     
       return ( 
-        <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
+      <Tab panes={panes} />    
     )  
 };
